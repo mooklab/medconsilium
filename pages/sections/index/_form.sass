@@ -1,0 +1,92 @@
+section.form
+    margin-top: 74px
+    margin-bottom: 74px
+    +screen(m)
+        margin-top: 45px
+        margin-bottom: 0px
+
+    div.container
+        border: 1px solid #ecf2f4
+        border-radius: 3px
+        padding: 30px
+        +screen(m)
+            grid-column: full
+            background: #F4F3F1
+
+    div.title
+        display: grid
+        grid-gap: 3px
+        margin-bottom: 24px
+        font-weight: 400
+        font-size: 15px
+        line-height: 140%
+        +screen(m)
+            margin-bottom: 20px
+
+        span
+            font-weight: 400
+            font-size: 15px
+            line-height: 140%
+            color: #666
+            +screen(m)
+                font-size: 12px
+
+    div.inputs
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 32px
+        margin-bottom: 32px
+        +screen(m)
+            grid-template-columns: 1fr
+            grid-gap: 8px
+            margin-bottom: 8px
+
+    input, textarea
+        padding: 16px
+        padding-right: 20px
+        border: 1px solid #ecf2f4
+        border-radius: 5px
+        +screen(m)
+            padding: 5px 10px
+            border-bottom: 1px solid #666
+            border-radius: unset
+            font-size: 10px
+
+        &::placeholder
+            font-weight: 400
+            font-size: 18px
+            line-height: 140%
+            color: #666
+            +screen(m)
+                font-size: 10px
+                color: #333
+
+
+    textarea
+        width: 100%
+        height: 111px
+        margin-bottom: 42px
+        +screen(m)
+            height: 60px
+            margin-bottom: 25px
+
+    div.submit
+        display: grid
+        grid-template-columns: max-content 1fr
+        align-items: center
+        grid-gap: 24px
+        +screen(m)
+            grid-template-columns: 1fr
+            justify-items: center
+            text-align: center
+            grid-gap: 9px
+            br
+                display: none
+
+        span
+            font-weight: 400
+            font-size: 15px
+            line-height: 140%
+            color: #666
+            +screen(m)
+                font-size: 10px

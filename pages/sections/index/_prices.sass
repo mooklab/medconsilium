@@ -1,0 +1,103 @@
+section.prices
+    margin-top: 74px
+    margin-bottom: 74px
+    +screen(m)
+        margin-top: 45px
+        margin-bottom: 45px
+
+    div.container
+        display: grid
+        grid-gap: 43px
+        +screen(m)
+            grid-gap: 13px
+
+    div.list
+        display: grid
+        grid-gap: 4px
+        +screen(m)
+            grid-gap: 3px
+
+    div.accordion
+        border: 1px solid #ecf2f4
+        border-radius: 3px
+
+        div.accordion_caption
+            cursor: pointer
+            display: grid
+            align-items: center
+            grid-template-columns: 1fr repeat(2, max-content)
+            grid-gap: 33px
+            padding: 25px 33px
+            +screen(m)
+                padding: 22px 18px
+                padding-right: 28px
+                grid-gap: 24px
+
+            h3
+                font-weight: 700
+                font-size: 18px
+                line-height: 120%
+                color: #333
+                +screen(m)
+                    font-size: 13px
+
+            span
+                font-weight: 400
+                font-size: 18px
+                line-height: 120%
+                color: #333
+                text-align: right
+                +screen(m)
+                    font-size: 13px
+
+
+            div.arrow
+                cursor: pointer
+                display: grid
+                align-items: center
+                justify-items: center
+                width: 32px
+                height: 32px
+                border-radius: 999px
+                border: 1px solid rgba(24, 139, 48, 0.3)
+                transition: all 0.3s
+                +screen(m)
+                    border: unset
+                    width: 10px
+                    height: 10px
+
+                &:first-child
+                    transform: scaleX(-1)
+
+                &.swiper-button-disabled
+                    pointer-events: none
+                    opacity: 0.3
+
+                &:hover
+                    background: #188B30
+                    svg path
+                        stroke: white
+
+        div.accordion_wrap
+            padding: 25px 33px
+            padding-top: unset !important
+            font-weight: 400
+            font-size: 15px
+            line-height: 159%
+            color: #666
+            +screen(m)
+                font-size: 12px
+                padding: 18px
+
+        &.open
+            div.accordion_caption
+                h3, span
+                    color: #188b30
+                div.arrow
+                    transform: rotate(180deg)
+
+
+
+
+
+

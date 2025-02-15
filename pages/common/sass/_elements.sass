@@ -1,0 +1,159 @@
+h1
+    font-weight: 700
+    font-size: 36px
+    line-height: 120%
+    color: #333
+    +screen(m)
+        font-size: 23px
+    
+h2
+    font-weight: 700
+    font-size: 36px
+    line-height: 120%
+    color: #333
+    +screen(m)
+        font-size: 18px
+
+h3
+    font-weight: 700
+    font-size: 24px
+    line-height: 120%
+    color: #333
+    +screen(m)
+        font-size: 16px
+    
+div.swiper
+    user-select: none
+    overflow: visible
+
+    div.swiper-wrapper
+        height: auto !important
+
+    div.swiper-slide
+        opacity: 0
+        pointer-events: none
+        transition: opacity 0.2s
+
+    div.swiper-slide-visible
+        opacity: 1
+        pointer-events: auto
+    
+div.swiper-navigation
+    user-select: none
+    display: grid
+    align-items: center
+    grid-auto-flow: column
+    grid-auto-columns: max-content
+    grid-gap: 8px
+    +screen(m)
+        grid-gap: 4px
+
+    div.arrow
+        cursor: pointer
+        display: grid
+        align-items: center
+        justify-items: center
+        width: 39px
+        height: 39px
+        border-radius: 999px
+        border: 1px solid #188B30
+        +screen(m)
+            width: 30px
+            height: 30px
+
+        &:first-child
+            transform: scaleX(-1)
+
+        &.swiper-button-disabled
+            pointer-events: none
+            opacity: 0.3
+
+        &:hover
+            background: #188B30
+            svg path
+                stroke: white
+
+    &:has(div.swiper-button-lock)
+        display: none
+
+div.swiper-pagination-custom
+    display: grid
+    align-items: center
+    justify-content: center
+    grid-auto-flow: column
+    grid-auto-columns: max-content
+    grid-gap: 7px
+    height: 10px
+    margin-top: 10px
+
+    span.swiper-pagination-bullet
+        display: block
+        width: 7px
+        height: 7px
+        background: #c5c5c5
+        opacity: 1
+        transition: all 0.2s
+        margin: unset !important
+
+    span.swiper-pagination-bullet-active
+        background: #398938
+        width: 10px
+        height: 10px
+
+button, a.button
+    cursor: pointer
+    display: grid
+    align-items: center
+    justify-items: center
+    color: #fff
+    background: #188b30
+    border-radius: 999px
+    padding: 7px 20px
+    font-weight: 400
+    font-size: 16px
+    line-height: 150%
+    +screen(m)
+        padding: 8px 26px
+        font-weight: 700
+        font-size: 13px
+
+section.breadcrumbs
+    padding-top: 54px
+    padding-bottom: 15px
+    +screen(m)
+        padding-bottom: 20px
+
+    div.container
+        display: flex
+
+    img
+        opacity: 0.2
+        padding-left: 10px
+        padding-right: 8px
+
+    a
+        font-weight: 400
+        font-size: 12px
+        line-height: 108%
+        color: #666
+
+    span
+        font-weight: 400
+        font-size: 12px
+        line-height: 108%
+        color: #000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

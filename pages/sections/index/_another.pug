@@ -1,0 +1,30 @@
+mixin service(icon, title)
+    div.service
+        img(src=icon, alt=title)
+        div.name
+            h3= title
+            a(href="###").arrow
+                include ../../../images/swiper-arrow.svg
+            a(href="###").link подробнее 
+
+section.another
+    div.container
+
+        div.title
+            h2 Другие направления клиники
+            div.swiper-navigation
+                div.arrow
+                    include ../../../images/swiper-arrow.svg
+                div.arrow
+                    include ../../../images/swiper-arrow.svg
+
+        div.swiper
+            div.swiper-wrapper
+                div.swiper-slide
+                    +service('images/service_2.svg', 'Урология')
+                div.swiper-slide
+                    +service('images/service_3.svg', 'Гинекология')
+                div.swiper-slide
+                    +service('images/service_4.svg', 'Кардиология')
+                div.swiper-slide
+                    +service('images/service_1.svg', 'Стоматология')

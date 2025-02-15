@@ -1,0 +1,142 @@
+footer
+    background: #F1F4F5
+    padding-top: 64px
+    padding-bottom: 50px
+
+    div.top
+        font-weight: 400
+        font-size: 24px
+        line-height: 104%
+        text-align: center
+        color: #969ba5
+        margin-bottom: 24px
+
+    div.middle
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-gap: 30px
+        +screen(m)
+            grid-template-columns: repeat(2, 1fr)
+        +screen(s)
+            grid-template-columns: 1fr
+            justify-items: center
+            text-align: center
+
+    div.contacts
+        display: grid
+        grid-gap: 24px
+        font-weight: 400
+        font-size: 14px
+        line-height: 130%
+        color: #333
+
+        img
+            width: 14px
+            height: 15px
+            object-fit: contain
+            margin-top: 0.1em
+            +screen(s)
+                display: none
+
+        & > *
+            display: grid
+            grid-template-columns: max-content 1fr
+            grid-gap: 14px
+            +screen(s)
+                grid-template-columns: 1fr
+
+        div.phone
+            display: grid
+            align-items: start
+            grid-template-columns: max-content max-content
+            grid-gap: 12px
+            +screen(s)
+                grid-template-columns: 1fr
+
+            img
+                margin-top: 6px
+
+            div
+                display: grid
+                grid-gap: 4px
+                a.phone
+                    font-weight: 700
+                    font-size: 16px
+                    line-height: 150%
+                    color: #333
+                a.link
+                    font-weight: 400
+                    font-size: 13px
+                    line-height: 138%
+                    color: #188b30
+
+    div.socials
+        span
+            font-weight: 700
+            font-size: 14px
+            line-height: 179%
+            color: #333
+            margin-bottom: 8px
+
+        div.links
+            margin-bottom: 19px
+
+        button
+            padding: 14px 26px
+            font-weight: 700
+            font-size: 15px
+            line-height: 120%
+            text-align: center
+            color: #fff
+
+    div.additional
+        display: grid
+        grid-gap: 21px
+
+        & > *:nth-child(1)
+            +screen(s)
+                display: none
+        +screen(s)
+            br
+                display: none
+
+    div.bottom
+        display: grid
+        grid-template-columns: 1fr
+        grid-gap: 36px
+        grid-auto-flow: column
+        grid-auto-columns: max-content
+        margin-top: 50px
+        +screen(m)
+            grid-gap: 24px
+            grid-auto-flow: row
+            text-align: center
+            justify-items: center
+
+        span
+            font-weight: 400
+            font-size: 13px
+            line-height: 138%
+            color: #999
+
+        a
+            font-weight: 400
+            font-size: 13px
+            line-height: 138%
+            text-align: right
+            color: #999
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

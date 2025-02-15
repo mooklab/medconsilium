@@ -1,0 +1,25 @@
+mixin question(title)
+    div.accordion
+        div.accordion_caption
+            h3= title
+            div.arrow
+                include ../../../images/accordion-arrow.svg
+        div.accordion_content
+            div.accordion_overflow
+                div.accordion_wrap
+                    span Да, конечно. В клинике возможен наличный и безналичный расчет. Вы можете выбрать любой удобный способ.
+
+section.questions
+    div.container
+
+        div.title
+            h2 Вопросы
+            span Мы собрали ответы на самые #[br]распространенные вопросы наших  #[br]пациентов для вашего удобства.
+
+        div.questions
+            +question('Возможен ли безналичный расчет?')
+            +question('Может ли бабушка или няня привести ребенка на консультацию?')
+            +question('Можно ли оплатить лечение за родителей?')
+            +question('Где находится клиника?')
+
+        

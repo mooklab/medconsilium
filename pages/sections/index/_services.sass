@@ -1,0 +1,145 @@
+section.services
+    margin-top: 74px
+    margin-bottom: 74px
+    +screen(m)
+        margin-top: 45px
+        margin-bottom: 45px
+
+    div.title
+        display: grid
+        grid-template-columns: 1fr max-content
+        align-items: center
+        grid-gap: 30px
+        margin-bottom: 23px
+        padding-right: 30px
+        +screen(m)
+            padding-right: 7px
+            margin-bottom: 9px
+
+    div.swiper-slide
+        height: auto !important
+
+    div.service
+        padding: 33px
+        padding-left: 41px
+        border: 1px solid #ecf2f4
+        border-radius: 3px
+        height: 100%
+        display: grid
+        grid-template-rows: repeat(2, max-content) 1fr
+        +screen(m)
+            padding: 18px 16px
+            padding-left: 22px
+
+        img.icon
+            width: 99px
+            margin-bottom: 35px
+            aspect-ratio: 1 / 1
+            +screen(m)
+                width: 48px
+                margin-bottom: 10px
+
+        div.name
+            display: grid
+            margin-bottom: 42px
+            +screen(m)
+                margin-bottom: 10px
+
+            span
+                font-weight: 400
+                font-size: 18px
+                line-height: 120%
+                color: #333
+                +screen(m)
+                    font-size: 12px
+
+            h3 
+                font-weight: 700
+                font-size: 24px
+                line-height: 120%
+                color: #333
+                +screen(m)
+                    font-size: 16px
+
+        ul
+            display: grid
+            align-content: start
+            grid-gap: 13px
+            margin-bottom: 43px
+            +screen(m)
+                grid-gap: 6px
+                margin-bottom: 10px
+
+            li
+                position: relative
+                padding-left: 17px
+                font-weight: 400
+                font-size: 18px
+                line-height: 120%
+                color: #666
+                +screen(m)
+                    font-size: 12px
+                    line-height: 135%
+                    padding-left: 11px
+
+                &::after
+                    content: ''
+                    position: absolute
+                    top: 6px
+                    left: 0
+                    width: 8px
+                    height: 8px
+                    background: #188B30
+                    border-radius: 4px
+                    +screen(m)
+                        width: 5px
+                        height: 5px
+                        top: 5px
+
+        div.order
+            display: grid
+            grid-auto-flow: column
+            align-items: center
+            align-content: end
+            grid-auto-columns: max-content
+            justify-content: space-between
+
+            span
+                font-weight: 700
+                font-size: 24px
+                line-height: 120%
+                color: #333
+                +screen(m)
+                    font-size: 15px
+
+            a.arrow
+                cursor: pointer
+                display: grid
+                align-items: center
+                justify-items: center
+                width: 39px
+                height: 39px
+                border-radius: 999px
+                border: 1px solid #188B30
+                +screen(m)
+                    width: 30px
+                    height: 30px
+                
+                &:hover
+                    background: #188B30
+                    svg path
+                        stroke: white
+
+    div.swiper-pagination-custom
+        display: none
+        +screen(m)
+            display: grid
+
+
+
+
+
+
+
+
+

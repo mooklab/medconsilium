@@ -1,0 +1,106 @@
+section.questions
+    margin-top: 74px
+    margin-bottom: 74px
+    +screen(m)
+        margin-top: 45px
+        margin-bottom: 45px
+
+    div.container
+        display: grid
+        align-items: start
+        grid-template-columns: 420px 1fr
+        grid-gap: 60px
+        +screen(m)
+            grid-template-columns: 1fr
+            grid-gap: 16px
+
+    div.title
+        display: grid
+        grid-gap: 19px
+        span
+            font-weight: 400
+            font-size: 18px
+            line-height: 120%
+            color: #666
+            +screen(m)
+                font-size: 12px
+        br
+            +screen(m)
+                display: none
+
+    div.questions
+        margin-top: 39px
+        +screen(m)
+            margin-top: unset
+
+    div.accordion
+        border-top: 1px solid #ecf2f4
+        border-radius: 3px
+
+        div.accordion_caption
+            cursor: pointer
+            display: grid
+            align-items: center
+            grid-template-columns: 1fr max-content
+            grid-gap: 33px
+            padding: 18px 12px
+            padding-left: 43px
+            +screen(m)
+                padding: 10px
+                // padding-bottom: 15px
+                grid-gap: 10px
+
+            h3
+                font-weight: 700
+                font-size: 18px
+                line-height: 120%
+                color: #333
+                +screen(m)
+                    font-size: 13px
+
+            div.arrow
+                cursor: pointer
+                display: grid
+                align-items: center
+                justify-items: center
+                width: 32px
+                height: 32px
+                border-radius: 999px
+                border: 1px solid rgba(24, 139, 48, 0.3)
+                transition: all 0.3s
+                +screen(m)
+                    border: unset
+                    width: 10px
+                    height: 10px
+
+                &:first-child
+                    transform: scaleX(-1)
+
+                &.swiper-button-disabled
+                    pointer-events: none
+                    opacity: 0.3
+
+                &:hover
+                    background: #188B30
+                    svg path
+                        stroke: white
+
+        div.accordion_wrap
+            padding: 22px 43px
+            padding-top: unset !important
+            font-weight: 400
+            font-size: 15px
+            line-height: 159%
+            color: #666
+            +screen(m)
+                font-size: 12px
+                padding: 10px
+                padding-bottom: 15px
+
+        &.open
+            div.accordion_caption
+                div.arrow
+                    transform: rotate(180deg)
+
+        &:last-childd
+            border-bottom: 1px solid #ecf2f4

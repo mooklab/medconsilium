@@ -1,0 +1,57 @@
+section.banner
+    div.container
+
+        div.banner
+            border-radius: 10px
+            background: #f4f3f1
+            padding: 48px 41px
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            +screen(m)
+                grid-template-columns: 1fr
+                text-align: center
+                padding: 40px 20px 32px
+                border-radius: 0
+
+            div.text
+                display: grid
+                +screen(m)
+                    order: 2
+                    justify-items: center
+
+                h2
+                    margin-bottom: 17px
+                    +screen(m)
+                        margin-bottom: 5px
+
+                span
+                    display: block
+                    font-weight: 400
+                    font-size: 18px
+                    line-height: 159%
+                    color: #666
+                    margin-bottom: 36px
+                    +screen(m)
+                        font-size: 12px
+                        margin-bottom: 19px
+
+                button
+                    padding: 14px 25px
+                    justify-self: start
+                    +screen(m)
+                        padding: 8px 25px
+                        justify-self: center
+
+
+
+            img
+                width: 100%
+                max-width: 452px
+                align-self: start
+                justify-self: end
+                +screen(m)
+                    align-self: center
+                    justify-self: center
+                    max-width: 210px
+                    order: 1
+                    margin-bottom: 36px

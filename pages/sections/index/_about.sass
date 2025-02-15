@@ -1,0 +1,35 @@
+section.about
+    margin-top: 74px
+    margin-bottom: 74px
+    +screen(m)
+        margin-top: 45px
+        margin-bottom: 45px
+
+    div.container
+        +screen(m)
+            display: grid
+
+    img
+        max-width: 100%
+        +screen(m)
+            width: 100%
+            padding: unset !important
+        &.left
+            float: left
+            padding-right: 67px
+            padding-bottom: 24px
+
+    h2
+        +screen(m)
+            margin-top: 20px
+
+    p
+        padding-top: 24px
+        font-weight: 400
+        font-size: 18px
+        line-height: 120%
+        color: #666
+        +screen(m)
+            font-size: 12px
+            line-height: 135%
+            padding-top: 20px
