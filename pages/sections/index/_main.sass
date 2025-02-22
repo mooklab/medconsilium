@@ -3,7 +3,7 @@ section.main
     padding-bottom: 74px
     margin-bottom: 74px
     background: url(../images/5.webp) no-repeat, url(../images/4.webp) no-repeat
-    background-position: center right
+    background-position: center right, center center
     background-size: auto 100%, cover
     +screen(m)
         padding-top: 45px
@@ -11,10 +11,22 @@ section.main
         margin-bottom: 45px
 
     div.container
+        position: relative
         display: grid
         grid-template-columns: repeat(2, 1fr)
         +screen(m)
             grid-template-columns: 1fr
+
+    div.image
+        position: relative
+        height: 100%
+        +screen(m)
+            display: none
+        img
+            position: absolute
+            top: -74px
+            left: 0
+            height: calc(100% + 74px + 74px)
 
     h1
         margin-bottom: 24px
@@ -45,9 +57,7 @@ section.main
 
     ul
         padding-left: 2.5em
-        margin-bottom: 40px
         +screen(m)
-            margin-bottom: 17px
             padding-left: 1.5em
 
         li
@@ -65,10 +75,12 @@ section.main
         grid-template-columns: repeat(2, max-content)
         grid-gap: 24px
         align-items: center
+        margin-top: 40px
         +screen(m)
             grid-template-columns: 1fr
             justify-items: start
             grid-gap: 16px
+            margin-top: 17px
 
     button
         padding: 13px 25px

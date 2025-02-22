@@ -3,7 +3,7 @@ section.main {
   padding-bottom: 74px;
   margin-bottom: 74px;
   background: url(../images/5.webp) no-repeat, url(../images/4.webp) no-repeat;
-  background-position: center right;
+  background-position: center right, center center;
   background-size: auto 100%, cover;
 }
 @media (max-width: 960px) {
@@ -14,6 +14,7 @@ section.main {
   }
 }
 section.main div.container {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -21,6 +22,21 @@ section.main div.container {
   section.main div.container {
     grid-template-columns: 1fr;
   }
+}
+section.main div.image {
+  position: relative;
+  height: 100%;
+}
+@media (max-width: 960px) {
+  section.main div.image {
+    display: none;
+  }
+}
+section.main div.image img {
+  position: absolute;
+  top: -74px;
+  left: 0;
+  height: calc(100% + 74px + 74px);
 }
 section.main h1 {
   margin-bottom: 24px;
@@ -64,11 +80,9 @@ section.main div.discount span {
 }
 section.main ul {
   padding-left: 2.5em;
-  margin-bottom: 40px;
 }
 @media (max-width: 960px) {
   section.main ul {
-    margin-bottom: 17px;
     padding-left: 1.5em;
   }
 }
@@ -93,12 +107,14 @@ section.main div.buttons {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 40px;
 }
 @media (max-width: 960px) {
   section.main div.buttons {
     grid-template-columns: 1fr;
     justify-items: start;
     grid-gap: 16px;
+    margin-top: 17px;
   }
 }
 section.main button {
@@ -867,6 +883,9 @@ section.another div.title {
     margin-bottom: 9px;
   }
 }
+section.another div.swiper-slide {
+  height: auto !important;
+}
 section.another div.service {
   display: grid;
   justify-items: center;
@@ -907,11 +926,12 @@ section.another div.service div.name {
           align-items: center;
   -ms-flex-line-pack: end;
       align-content: end;
-  grid-auto-columns: -webkit-max-content;
-  grid-auto-columns: max-content;
+  grid-auto-columns: 1fr -webkit-max-content;
+  grid-auto-columns: 1fr max-content;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  grid-gap: 15px;
   width: 100%;
 }
 section.another div.service a.arrow {
@@ -1273,6 +1293,10 @@ section.form div.submit span {
   }
 }
 
+section.map div.bx-yandex-view-layout {
+  grid-column: full;
+  margin-bottom: unset;
+}
 section.map div#map {
   grid-column: full;
   height: 840px;
