@@ -2,9 +2,6 @@ section.main {
   padding-top: 74px;
   padding-bottom: 74px;
   margin-bottom: 74px;
-  background: url(../images/5.webp) no-repeat, url(../images/4.webp) no-repeat;
-  background-position: center right, center center;
-  background-size: auto 100%, cover;
 }
 @media (max-width: 960px) {
   section.main {
@@ -22,6 +19,29 @@ section.main div.container {
   section.main div.container {
     grid-template-columns: 1fr;
   }
+}
+section.main div.background {
+  grid-column: full;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+section.main div.background img.background {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+section.main div.background img.image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
 }
 section.main div.image {
   position: relative;
